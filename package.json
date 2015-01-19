@@ -1,0 +1,25 @@
+{
+  "name": "ass-parser",
+  "version": "0.0.0",
+  "description": "Parse SSA/ASS subtitle format",
+  "author": "Eugene Sharygin <eush77@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/eush77/ass-parser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eush77/ass-parser"
+  },
+  "bugs": {
+    "url": "https://github.com/eush77/ass-parser/issues"
+  },
+  "keywords": [
+    "SSA",
+    "ASS",
+    "subtitle",
+    "format",
+    "subtitles",
+    "parser"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
