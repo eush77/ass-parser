@@ -17,22 +17,6 @@ var zipmap = require('zipmap');
  *   - null if line is empty or is a comment line,
  *   - string otherwise
  *
- * @example
- * parseDescriptor("Timer: 100,0000")
- * // { key: "Timer", value: "100,0000" }
- *
- * @example
- * parseDescriptor("Format: A, B, C")
- * // { key: "Format", value: ["A", "B", "C"] }
- *
- * @example
- * parseDescriptor("Values: 1, 2, 3", ["A", "B", "C"])
- * // { key: "Values", value: { A: "1", B: "2", C: "3" } }
- *
- * @example
- * parseDescriptor("; Comment")
- * // null
- *
  * @arg {string} line
  * @arg {string[]} [format]
  * @return {Object|Array|string|null}
