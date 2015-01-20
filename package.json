@@ -7,6 +7,10 @@
   "scripts": {
     "test": "tape test/*.js"
   },
+  "files": [
+    "index.js",
+    "src/"
+  ],
   "homepage": "https://github.com/eush77/ass-parser",
   "repository": {
     "type": "git",
