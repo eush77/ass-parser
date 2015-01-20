@@ -39,13 +39,25 @@ Dialogue: Marked=0,0:00:01.18,0:00:06.85,DefaultVCD, NTP,0000,0000,0000,,{\pos(4
 
 ```
 
-`assParser()` will return the following:
+`assParser(text, { comments: true })` returns the following:
 
-```json
+```js
 [
     {
         "section": "Script Info",
         "body": [
+            {
+                "type": "comment",
+                "value": "This is a Sub Station Alpha v4 script."
+            },
+            {
+                "type": "comment",
+                "value": "For Sub Station Alpha info and downloads,"
+            },
+            {
+                "type": "comment",
+                "value": "go to http://www.eswat.demon.co.uk/"
+            },
             {
                 "key": "Title",
                 "value": "Neon Genesis Evangelion - Episode 26 (neutral Spanish)"
@@ -171,13 +183,19 @@ Dialogue: Marked=0,0:00:01.18,0:00:06.85,DefaultVCD, NTP,0000,0000,0000,,{\pos(4
 
 ## API
 
-### `assParser(text)`
+### `assParser(text, [options])`
 
-Returns the parse tree in a format described below.
+Returns the parse tree.
+
+Comments are ignored unless `options.comments` is set.
+
+| Option   | Type    | Required? | Default |
+| :------- | :------ | :-------: | :------ |
+| comments | boolean | No        | `false` |
 
 ## Format
 
-Subtitle is a list of sections, each of them has `section` and `body` properties. The `body` is a list of key-value bindings (descriptors), with `key` and `value` properties.
+Subtitle is a list of sections, each of them has `section` and `body` properties. The `body` is a list of key-value bindings (descriptors), with `key` and `value` properties (`type == 'comment'` and `value` for comments).
 
 `value` can be one of the following:
 - array if the descriptor key is `"Format"`;

@@ -26,7 +26,11 @@ test('descriptor', function (t) {
     }
   });
 
-  t.equal(parseDescriptor('; Comment'), null);
+  t.deepEqual(parseDescriptor('; Comment'), {
+    type: 'comment',
+    value: 'Comment'
+  });
+
   t.equal(parseDescriptor(''), null);
 
   t.end();

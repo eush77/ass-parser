@@ -14,16 +14,23 @@ var parseDescriptor = require('./src/descriptor');
  * lines in the same section.
  *
  * @arg {string[]} lines
+ * @arg {Object} [options]
  * @return {Object}
  */
-var parseSection = function (lines) {
+var parseSection = function (lines, options) {
+  options = options || {};
+
   // Format descriptor for subsequent section lines.
   var format = null;
 
   return flatmap(lines, function (line) {
     var descriptor = parseDescriptor(line, format);
     if (!descriptor) {
-      // Empty / comment.
+      // Empty line.
+      return null;
+    }
+
+    if (descriptor.type == 'comment' && !options.comments) {
       return null;
     }
 
@@ -36,7 +43,7 @@ var parseSection = function (lines) {
 };
 
 
-var parseAss = function (text) {
+var parseAss = function (text, options) {
   var sections = execAll(/^\s*\[(.*)\]\s*$/mg, text);
 
   return fzip(sections, sections.slice(1), function (section, nextSection) {
@@ -48,7 +55,7 @@ var parseAss = function (text) {
 
     return {
       section: sectionName,
-      body: parseSection(lines)
+      body: parseSection(lines, options)
     };
   });
 };
