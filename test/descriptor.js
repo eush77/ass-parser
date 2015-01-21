@@ -28,7 +28,12 @@ test('descriptor', function (t) {
 
   t.deepEqual(parseDescriptor('; Comment'), {
     type: 'comment',
-    value: 'Comment'
+    value: ' Comment'
+  });
+
+  t.deepEqual(parseDescriptor(';; Comment'), {
+    type: 'comment',
+    value: '; Comment'
   });
 
   t.equal(parseDescriptor(''), null);

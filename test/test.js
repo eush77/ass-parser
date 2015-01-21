@@ -13,13 +13,13 @@ var subtitleWithComments = [{
   section: 'Script Info',
   body: [{
     type: 'comment',
-    value: 'This is a Sub Station Alpha v4 script.'
+    value: ' This is a Sub Station Alpha v4 script.'
   }, {
     type: 'comment',
-    value: 'For Sub Station Alpha info and downloads,'
+    value: ' For Sub Station Alpha info and downloads,'
   }, {
     type: 'comment',
-    value: 'go to http://www.eswat.demon.co.uk/'
+    value: ' go to http://www.eswat.demon.co.uk/'
   }, {
     key: 'Title',
     value: 'Neon Genesis Evangelion - Episode 26 (neutral Spanish)'

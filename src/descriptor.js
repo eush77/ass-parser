@@ -26,7 +26,7 @@ module.exports = function (line, format) {
   else if (line[0] == ';') {
     return {
       type: 'comment',
-      value: line.slice(1).trim()
+      value: line.slice(1)
     };
   }
 
