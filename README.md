@@ -48,15 +48,15 @@ Dialogue: Marked=0,0:00:01.18,0:00:06.85,DefaultVCD, NTP,0000,0000,0000,,{\pos(4
         "body": [
             {
                 "type": "comment",
-                "value": "This is a Sub Station Alpha v4 script."
+                "value": " This is a Sub Station Alpha v4 script."
             },
             {
                 "type": "comment",
-                "value": "For Sub Station Alpha info and downloads,"
+                "value": " For Sub Station Alpha info and downloads,"
             },
             {
                 "type": "comment",
-                "value": "go to http://www.eswat.demon.co.uk/"
+                "value": " go to http://www.eswat.demon.co.uk/"
             },
             {
                 "key": "Title",
