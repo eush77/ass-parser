@@ -207,6 +207,10 @@ Subtitle is a list of sections, each of them has `section` and `body` properties
 - [Wikipedia page](http://en.wikipedia.org/wiki/SubStation_Alpha)
 - [format specification](http://www.perlfu.co.uk/projects/asa/ass-specs.doc)
 
+## Related
+
+- [ass-stringify](https://www.npmjs.com/packages/ass-stringify) - stringify SSA/ASS parse tree.
+
 ## Install
 
 ```shell
