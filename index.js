@@ -44,6 +44,7 @@ var parseSection = function (lines, options) {
 
 
 var parseAss = function (text, options) {
+  text = text.toString();
   var sections = execAll(/^\s*\[(.*)\]\s*$/mg, text);
 
   return fzip(sections, sections.slice(1), function (section, nextSection) {

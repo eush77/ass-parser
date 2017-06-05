@@ -7,7 +7,9 @@ var test = require('tape');
 var fs = require('fs');
 
 
-var sample = fs.readFileSync(__dirname + '/sample.ass', { encoding: 'utf8' });
+var sample = function (encoding) {
+  return fs.readFileSync(__dirname + '/sample.ass', { encoding: encoding });
+};
 
 var subtitleWithComments = require('./sample.json');
 var subtitleWithoutComments = subtitleWithComments.map(function (section) {
@@ -21,7 +23,14 @@ var subtitleWithoutComments = subtitleWithComments.map(function (section) {
 
 
 test('ass-parser', function (t) {
-  t.deepEqual(assParser(sample), subtitleWithoutComments, 'without comments');
-  t.deepEqual(assParser(sample, { comments: true }), subtitleWithComments, 'with comments');
+  t.deepEqual(assParser(sample('utf8')),
+              subtitleWithoutComments,
+              'without comments');
+  t.deepEqual(assParser(sample('utf8'), { comments: true }),
+              subtitleWithComments,
+              'with comments');
+  t.deepEqual(assParser(sample(null)),
+              subtitleWithoutComments,
+              'without comments (buffer)');
   t.end();
 });
