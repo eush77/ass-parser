@@ -30,10 +30,10 @@
   "dependencies": {
     "flatmap": "0.0.3",
     "fzip": "^0.2.0",
-    "regexp.execall": "^0.1.0",
+    "regexp.execall": "^1.0.2",
     "zipmap": "^1.1.1"
   },
   "devDependencies": {
-    "tape": "^3.4.0"
+    "tape": "^4.6.3"
   }
 }
