@@ -63,3 +63,4 @@ var parseAss = function (text, options) {
 
 
 module.exports = parseAss;
+module.exports.default = parseAss;
