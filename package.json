@@ -1,6 +1,6 @@
 {
   "name": "ass-parser",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Parse SSA/ASS subtitle format",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
